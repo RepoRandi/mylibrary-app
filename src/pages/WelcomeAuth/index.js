@@ -4,7 +4,11 @@ import ActionButton from './ActionButton';
 import {colors} from '../../utils';
 import {welcomeAuth} from '../../assets';
 
-const WelcomeAuth = () => {
+const WelcomeAuth = ({navigation}) => {
+  const handleGoTo = (screen) => {
+    navigation.navigate(screen);
+  };
+
   return (
     <View style={styles.wrapper.page}>
       <View />
@@ -13,10 +17,12 @@ const WelcomeAuth = () => {
       <ActionButton
         desc="Silahkan Masuk, Jika Anda Sudah Memiliki Akun"
         title="MASUK"
+        onPress={() => handleGoTo('Login')}
       />
       <ActionButton
         desc="Atau Silahkan Daftar, Jika Anda Anda Belum Memiliki Akun"
         title="DAFTAR"
+        onPress={() => handleGoTo('Register')}
       />
     </View>
   );
