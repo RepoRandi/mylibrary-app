@@ -1,16 +1,17 @@
-import React, {useState} from 'react';
-import {View, Text, Image} from 'react-native';
-import {Input, Button} from '../../components';
-import {colors} from '../../utils';
-import {IconBack} from '../../assets';
+import React, {useEffect} from 'react';
+import {ScrollView, Text, View} from 'react-native';
+import {useDispatch, useSelector} from 'react-redux';
 import {IllustrationRegister} from '../../assets';
+import {Button, Input} from '../../components';
+import {setForm} from '../../redux';
+import {colors} from '../../utils';
 
-const Register = () => {
-  const [form, setForm] = useState({
-    userName: '',
-    fullName: '',
-    email: '',
-    password: '',
+const Register = ({navigation}) => {
+  const {form} = useSelector((state) => state.RegisterReducer);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    console.log('register :', form);
   });
 
   const sendData = () => {
@@ -18,50 +19,49 @@ const Register = () => {
   };
 
   const onInputChange = (value, input) => {
-    setForm({
-      ...form,
-      [input]: value,
-    });
+    dispatch(setForm(input, value));
   };
 
   return (
     <View style={styles.wrapper.page}>
-      <Image source={IconBack} style={styles.iconBack} />
-      <IllustrationRegister
-        width={200}
-        height={150}
-        style={styles.illustration}
-      />
-      <Text style={styles.text.desc}>
-        Mohon Mengisi Beberapa Data Untuk Proses Daftar Anda
-      </Text>
-      <View style={styles.space(64)} />
-      <Input
-        placeholder="User Name"
-        value={form.userName}
-        onChangeText={(value) => onInputChange(value, 'userName')}
-      />
-      <View style={styles.space(33)} />
-      <Input
-        placeholder="Full Name"
-        value={form.fullName}
-        onChangeText={(value) => onInputChange(value, 'fullName')}
-      />
-      <View style={styles.space(33)} />
-      <Input
-        placeholder="Email"
-        value={form.email}
-        onChangeText={(value) => onInputChange(value, 'email')}
-      />
-      <View style={styles.space(33)} />
-      <Input
-        placeholder="Password"
-        value={form.password}
-        onChangeText={(value) => onInputChange(value, 'password')}
-        secureTextEntry={true}
-      />
-      <View style={styles.space(33)} />
-      <Button title="DAFTAR" onPress={sendData} />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <Button type="icon" name="back" onPress={() => navigation.goBack()} />
+        <IllustrationRegister
+          width={200}
+          height={150}
+          style={styles.illustration}
+        />
+        <Text style={styles.text.desc}>
+          Mohon Mengisi Beberapa Data Untuk Proses Daftar Anda
+        </Text>
+        <View style={styles.space(64)} />
+        <Input
+          placeholder="User Name"
+          value={form.userName}
+          onChangeText={(value) => onInputChange(value, 'username')}
+        />
+        <View style={styles.space(33)} />
+        <Input
+          placeholder="Full Name"
+          value={form.fullName}
+          onChangeText={(value) => onInputChange(value, 'fullname')}
+        />
+        <View style={styles.space(33)} />
+        <Input
+          placeholder="Email"
+          value={form.email}
+          onChangeText={(value) => onInputChange(value, 'email')}
+        />
+        <View style={styles.space(33)} />
+        <Input
+          placeholder="Password"
+          value={form.password}
+          onChangeText={(value) => onInputChange(value, 'password')}
+          secureTextEntry={true}
+        />
+        <View style={styles.space(53)} />
+        <Button title="DAFTAR" onPress={sendData} />
+      </ScrollView>
     </View>
   );
 };
@@ -73,10 +73,6 @@ const styles = {
       backgroundColor: 'white',
       flex: 1,
     },
-  },
-  iconBack: {
-    width: 25,
-    height: 25,
   },
   illustration: {
     marginTop: 8,
