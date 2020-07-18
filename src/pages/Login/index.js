@@ -1,25 +1,37 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
 import {IllustrationLogin} from '../../assets';
 import {Button, Input} from '../../components';
-import {setForm} from '../../redux';
 import {colors} from '../../utils';
+import {connect} from 'react-redux';
+import {login} from '../../redux/actions/auth';
 
-const Login = ({navigation}) => {
-  const {form} = useSelector((state) => state.LoginReducer);
-  const dispatch = useDispatch();
+const Login = ({props, navigation}) => {
+  const [data, setData] = useState({
+    username: '',
+    password: '',
+  });
 
   useEffect(() => {
-    console.log('login :', form);
+    console.log('login :', data);
   });
 
   const sendData = () => {
-    console.log('Data yg DiKirim:', form);
+    console.log('Data yg DiKirim:', data);
+    props.login(data).then(() => {
+        console.log('Login Berhasil!');
+        props.navigation.navigate('Home');
+      })
+      .catch((err) => {
+        console.log('Username Atau Password Salah. Message:', err);
+      });
   };
 
   const onInputChange = (value, input) => {
-    dispatch(setForm(input, value));
+    setData({
+      ...data,
+      [input]: value,
+    });
   };
 
   return (
@@ -37,13 +49,13 @@ const Login = ({navigation}) => {
         <View style={styles.space(64)} />
         <Input
           placeholder="User Name"
-          value={form.username}
+          value={data.username}
           onChangeText={(value) => onInputChange(value, 'username')}
         />
         <View style={styles.space(33)} />
         <Input
           placeholder="Password"
-          value={form.password}
+          value={data.password}
           onChangeText={(value) => onInputChange(value, 'password')}
           secureTextEntry={true}
         />
@@ -78,4 +90,11 @@ const styles = {
     return {height: value};
   },
 };
-export default Login;
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = { login };
+
+export default connect(mapStateToProps,mapDispatchToProps)(Login);

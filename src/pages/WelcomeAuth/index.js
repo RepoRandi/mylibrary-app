@@ -24,6 +24,12 @@ const WelcomeAuth = ({navigation}) => {
         title="DAFTAR"
         onPress={() => handleGoTo('Register')}
       />
+
+      <ActionButton
+        desc="Atau Silahkan Daftar, Jika Anda Anda Belum Memiliki Akun"
+        title="Home"
+        onPress={() => handleGoTo('Home')}
+      />
     </View>
   );
 };

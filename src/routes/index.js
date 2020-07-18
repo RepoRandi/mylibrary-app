@@ -1,8 +1,10 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Splash, WelcomeAuth, Register, Login} from '../pages';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {Splash, WelcomeAuth, Register, Login, Home} from '../pages';
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const Router = () => {
   return (
@@ -29,6 +31,7 @@ const Router = () => {
           headerShown: false,
         }}
       />
+      <Tab.Screen name="Home" component={Home} />
     </Stack.Navigator>
   );
 };

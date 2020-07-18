@@ -1,25 +1,31 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
 import {IllustrationRegister} from '../../assets';
 import {Button, Input} from '../../components';
-import {setForm} from '../../redux';
 import {colors} from '../../utils';
 
 const Register = ({navigation}) => {
-  const {form} = useSelector((state) => state.RegisterReducer);
-  const dispatch = useDispatch();
+  const [data, setData] = useState({
+    username: '',
+    fullname: '',
+    email: '',
+    password: '',
+  });
 
   useEffect(() => {
-    console.log('register :', form);
+    console.log('Register :', data);
   });
 
   const sendData = () => {
-    console.log('Data yg DiKirim:', form);
+    console.log('Data yg DiKirim:', data);
+    // Axios.post(url, data);
   };
 
   const onInputChange = (value, input) => {
-    dispatch(setForm(input, value));
+    setData({
+      ...data,
+      [input]: value,
+    });
   };
 
   return (
@@ -37,25 +43,25 @@ const Register = ({navigation}) => {
         <View style={styles.space(64)} />
         <Input
           placeholder="User Name"
-          value={form.userName}
+          value={data.userName}
           onChangeText={(value) => onInputChange(value, 'username')}
         />
         <View style={styles.space(33)} />
         <Input
           placeholder="Full Name"
-          value={form.fullName}
+          value={data.fullName}
           onChangeText={(value) => onInputChange(value, 'fullname')}
         />
         <View style={styles.space(33)} />
         <Input
           placeholder="Email"
-          value={form.email}
+          value={data.email}
           onChangeText={(value) => onInputChange(value, 'email')}
         />
         <View style={styles.space(33)} />
         <Input
           placeholder="Password"
-          value={form.password}
+          value={data.password}
           onChangeText={(value) => onInputChange(value, 'password')}
           secureTextEntry={true}
         />
