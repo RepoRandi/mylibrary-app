@@ -13,7 +13,10 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const store = createStore(persistedReducer, applyMiddleware(promiseMiddleware));
+const store = createStore(
+  persistedReducer,
+  applyMiddleware(promiseMiddleware, logger),
+);
 
 const persistor = persistStore(store);
 

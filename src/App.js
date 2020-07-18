@@ -29,7 +29,6 @@ import {Provider} from 'react-redux';
 import storage from './redux/store';
 import {PersistGate} from 'redux-persist/integration/react';
 const {store, persistor} = storage;
-// import {store} from './redux';
 
 const App = () => {
   return (
