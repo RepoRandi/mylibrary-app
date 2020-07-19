@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, TextInput} from 'react-native';
+import {StyleSheet, TextInput} from 'react-native';
 import {colors} from '../../../utils';
 
 const Input = ({placeholder, ...rest}) => {
