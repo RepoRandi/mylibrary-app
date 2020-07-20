@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, View, Image, TextInput} from 'react-native';
+import {Text, View, Image, TextInput, ScrollView, Button} from 'react-native';
 
 const Home = () => {
   return (
     <View style={{flex: 1}}>
       {/* Content */}
-      <View style={{flex: 1, backgroundColor: 'white'}}>
+      <ScrollView style={{flex: 1, backgroundColor: 'white'}}>
         {/* Search Bar */}
         <View
           style={{marginHorizontal: 18, flexDirection: 'row', paddingTop: 15}}>
@@ -31,7 +31,7 @@ const Home = () => {
             style={{width: 35, alignItems: 'center', justifyContent: 'center'}}>
             <Image
               style={{position: 'absolute', top: 8, left: 12}}
-              source={require('../../assets/iconNavigasi/promo.png')}
+              source={require('../../assets/iconNavigasi/author-active.png')}
             />
           </View>
         </View>
@@ -128,7 +128,287 @@ const Home = () => {
           </View>
         </View>
         {/* Batas Go Book */}
-      </View>
+        {/* Category Menu */}
+        <View
+          style={{
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            marginTop: 18,
+            backgroundColor: 'white',
+          }}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              width: '100%',
+              marginBottom: 18,
+            }}>
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romancesddsdsds
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+          </View>
+
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              width: '100%',
+              marginBottom: 18,
+            }}>
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/go-more.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Romance
+              </Text>
+            </View>
+          </View>
+        </View>
+        {/* Batas Category Menu  */}
+        {/* News */}
+        <View style={{height: 17, backgroundColor: '#f2f2f4'}}></View>
+        <View>
+          <View style={{paddingTop: 16, paddingHorizontal: 18}}>
+            <Image
+              style={{height: 250, width: '100%', borderRadius: 6}}
+              source={require('../../assets/iconNavigasi/book11.jpg')}
+            />
+          </View>
+          <View
+            style={{
+              paddingTop: 16,
+              paddingHorizontal: 20,
+              borderBottomColor: '#E8E9ED',
+              borderBottomWidth: 2,
+              marginBottom: 20,
+            }}>
+            <View
+              style={{
+                backgroundColor: '#61A756',
+                paddingHorizontal: 12,
+                paddingVertical: 11,
+                alignSelf: 'flex-end',
+                borderRadius: 4,
+                marginBottom: 4,
+              }}>
+              <Text
+                style={{
+                  fontSize: 13,
+                  fontWeight: 'bold',
+                  color: 'white',
+                  textAlign: 'center',
+                }}>
+                READ
+              </Text>
+            </View>
+          </View>
+        </View>
+        {/* Batas News */}
+      </ScrollView>
       {/* Batas Content */}
       {/* Bottom Menu */}
       <View
