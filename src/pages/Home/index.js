@@ -1,6 +1,23 @@
 import React from 'react';
 import {Text, View, Image, TextInput, ScrollView} from 'react-native';
 
+const BookFeature = (props) => {
+  return (
+    <View style={{flex: 1, alignItems: 'center'}}>
+      <Image style={{width: 58, height: 58}} source={props.img} />
+      <Text
+        style={{
+          fontSize: 12,
+          fontWeight: 'bold',
+          color: '#1C1C1C',
+          marginTop: 15,
+        }}>
+        {props.title}
+      </Text>
+    </View>
+  );
+};
+
 const Home = () => {
   return (
     <View style={{flex: 1}}>
@@ -54,8 +71,9 @@ const Home = () => {
             }}>
             <Text
               style={{
-                color: 'grey',
+                color: '#43AB4A',
                 fontSize: 25,
+                fontWeight: 'bold',
                 textAlign: 'center',
                 textAlignVertical: 'center',
               }}>
@@ -81,50 +99,22 @@ const Home = () => {
               borderRightColor: '#E8E8E8',
               borderBottomColor: '#E8E8E8',
             }}>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image
-                style={{width: 60, height: 60}}
-                source={require('../../assets/iconNavigasi/book7.jpg')}
-              />
-            </View>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image
-                style={{width: 60, height: 60}}
-                source={require('../../assets/iconNavigasi/book8.jpg')}
-              />
-            </View>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image
-                style={{width: 60, height: 60}}
-                source={require('../../assets/iconNavigasi/book9.jpg')}
-              />
-            </View>
-            <View
-              style={{
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-              <Image
-                style={{width: 60, height: 60}}
-                source={require('../../assets/iconNavigasi/book10.jpg')}
-              />
-            </View>
+            <BookFeature
+              title="New Book"
+              img={require('../../assets/iconNavigasi/new.png')}
+            />
+            <BookFeature
+              title="Popular Book"
+              img={require('../../assets/iconNavigasi/popular.png')}
+            />
+            <BookFeature
+              title="Favorite Book"
+              img={require('../../assets/iconNavigasi/favorit.png')}
+            />
+            <BookFeature
+              title="History Book"
+              img={require('../../assets/iconNavigasi/histori.png')}
+            />
           </View>
         </View>
         {/* Batas Go Book */}
@@ -156,7 +146,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
+                  source={require('../../assets/iconNavigasi/romance.jpg')}
                 />
               </View>
               <Text
@@ -375,7 +365,7 @@ const Home = () => {
           <View style={{paddingTop: 16, paddingHorizontal: 18}}>
             <Image
               style={{height: 250, width: '100%', borderRadius: 6}}
-              source={require('../../assets/iconNavigasi/book11.jpg')}
+              source={require('../../assets/iconNavigasi/book10.jpg')}
             />
           </View>
           <View
