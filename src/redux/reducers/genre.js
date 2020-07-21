@@ -53,7 +53,6 @@ const genre = (state = initialState, action) => {
         data: action.payload.data.data[0],
       };
 
-    // PUT author
     case 'PUT_GENRE_PENDING':
       return {
         ...state,
@@ -77,7 +76,6 @@ const genre = (state = initialState, action) => {
         data: action.payload.data.data[0],
       };
 
-    // DELETE author
     case 'DELETE_GENRE_PENDING':
       return {
         ...state,

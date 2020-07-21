@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, Image, TextInput, ScrollView, Button} from 'react-native';
+import {Text, View, Image, TextInput, ScrollView} from 'react-native';
 
 const Home = () => {
   return (

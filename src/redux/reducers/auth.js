@@ -7,7 +7,6 @@ const initialState = {
 
 const auth = (state = initialState, action) => {
   switch (action.type) {
-    //// LOGIN
     case 'LOGIN_PENDING':
       return {
         ...state,
@@ -26,9 +25,8 @@ const auth = (state = initialState, action) => {
         ...state,
         isLoading: false,
         isError: false,
-        data: action.payload.data.body[0],
+        data: action.payload.data.data[0],
       };
-    //// REGISTER
     case 'REGISTER_PENDING':
       return {
         ...state,
@@ -49,7 +47,7 @@ const auth = (state = initialState, action) => {
         isError: false,
         data: action.payload.data.data[0],
       };
-    //// LOGOUT
+
     case 'LOGOUT':
       return {
         ...state,

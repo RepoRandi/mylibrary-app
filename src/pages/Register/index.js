@@ -3,22 +3,35 @@ import {ScrollView, Text, View} from 'react-native';
 import {IllustrationRegister} from '../../assets';
 import {Button, Input} from '../../components';
 import {colors} from '../../utils';
+import {connect} from 'react-redux';
+import {register} from '../../redux/actions/auth';
 
-const Register = ({navigation}) => {
+const Register = (props) => {
   const [data, setData] = useState({
     username: '',
     fullname: '',
     email: '',
     password: '',
+    role: 2,
   });
 
-  useEffect(() => {
-    console.log('Register :', data);
-  });
+  // useEffect(() => {
+  //   console.log('Register :', data);
+  // });
 
   const sendData = () => {
     console.log('Data yg DiKirim:', data);
     // Axios.post(url, data);
+    props
+      .register(data)
+      .then(() => {
+        alert('Register Sukses!');
+        props.navigation.navigate('Login');
+      })
+      .catch((err) => {
+        alert('Register Gagal!');
+        console.log(err);
+      });
   };
 
   const onInputChange = (value, input) => {
@@ -96,4 +109,11 @@ const styles = {
     return {height: value};
   },
 };
-export default Register;
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
+
+const mapDispatchToProps = {register};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

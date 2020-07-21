@@ -39,6 +39,9 @@ const App = () => {
         </NavigationContainer>
       </PersistGate>
     </Provider>
+    // <View>
+    //   <Text>Home</Text>
+    // </View>
   );
 };
 

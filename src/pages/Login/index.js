@@ -6,24 +6,27 @@ import {colors} from '../../utils';
 import {connect} from 'react-redux';
 import {login} from '../../redux/actions/auth';
 
-const Login = ({props, navigation}) => {
+const Login = (props) => {
   const [data, setData] = useState({
     username: '',
     password: '',
   });
 
-  useEffect(() => {
-    console.log('login :', data);
-  });
+  // useEffect(() => {
+  //   console.log('login :', props);
+  // });
 
   const sendData = () => {
-    console.log('Data yg DiKirim:', data);
-    props.login(data).then(() => {
-        console.log('Login Berhasil!');
+    // console.log('Data yg DiKirim:', data);
+    props
+      .login(data)
+      .then(() => {
+        alert('Login Sukses!');
         props.navigation.navigate('Home');
       })
       .catch((err) => {
-        console.log('Username Atau Password Salah. Message:', err);
+        alert('Username Atau Password Salah!');
+        console.log(err);
       });
   };
 
@@ -95,6 +98,6 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
 });
 
-const mapDispatchToProps = { login };
+const mapDispatchToProps = {login};
 
-export default connect(mapStateToProps,mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
