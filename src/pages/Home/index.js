@@ -382,9 +382,6 @@ const Home = () => {
             style={{
               paddingTop: 16,
               paddingHorizontal: 20,
-              borderBottomColor: '#E8E9ED',
-              borderBottomWidth: 2,
-              marginBottom: 20,
             }}>
             <View
               style={{
@@ -406,8 +403,200 @@ const Home = () => {
               </Text>
             </View>
           </View>
+          <View
+            style={{
+              borderBottomColor: '#E8E9ED',
+              borderBottomWidth: 1,
+              marginTop: 16,
+              marginBottom: 20,
+              marginHorizontal: 18,
+            }}></View>
         </View>
         {/* Batas News */}
+        {/* Populer Book */}
+        <View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginBottom: 10,
+              marginHorizontal: 18,
+            }}>
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#1C1C1C'}}>
+              Populer
+            </Text>
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#61A756'}}>
+              See All
+            </Text>
+          </View>
+          <ScrollView
+            horizontal
+            style={{flexDirection: 'row', paddingLeft: 18}}>
+            <View style={{marginRight: 16}}>
+              <View
+                style={{
+                  width: 150,
+                  height: 200,
+                  borderRadius: 10,
+                  backgroundColor: 'pink',
+                }}>
+                <Image
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 10,
+                    flex: 1,
+                  }}
+                  source={require('../../assets/imageBook/Komik-Jingga.jpg')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 6,
+                  textAlign: 'center',
+                }}>
+                Jingga
+              </Text>
+            </View>
+
+            <View style={{marginRight: 16}}>
+              <View
+                style={{
+                  width: 150,
+                  height: 200,
+                  borderRadius: 10,
+                  backgroundColor: 'pink',
+                }}>
+                <Image
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 10,
+                    flex: 1,
+                  }}
+                  source={require('../../assets/imageBook/JUDITH.jpg')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 6,
+                  textAlign: 'center',
+                }}>
+                Judith
+              </Text>
+            </View>
+
+            <View style={{marginRight: 16}}>
+              <View
+                style={{
+                  width: 150,
+                  height: 200,
+                  borderRadius: 10,
+                  backgroundColor: 'pink',
+                }}>
+                <Image
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 10,
+                    flex: 1,
+                  }}
+                  source={require('../../assets/imageBook/conflict_of_interest.jpg')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 6,
+                  textAlign: 'center',
+                }}>
+                Conflict Of Interest
+              </Text>
+            </View>
+
+            <View style={{marginRight: 16}}>
+              <View
+                style={{
+                  width: 150,
+                  height: 200,
+                  borderRadius: 10,
+                  backgroundColor: 'pink',
+                }}>
+                <Image
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 10,
+                    flex: 1,
+                  }}
+                  source={require('../../assets/imageBook/Demon_Slayer.jpg')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 6,
+                  textAlign: 'center',
+                }}>
+                Demon
+              </Text>
+            </View>
+
+            <View style={{marginRight: 16}}>
+              <View
+                style={{
+                  width: 150,
+                  height: 200,
+                  borderRadius: 10,
+                  backgroundColor: 'pink',
+                }}>
+                <Image
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 10,
+                    flex: 1,
+                  }}
+                  source={require('../../assets/imageBook/Unexpected-Relationshop.jpg')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 6,
+                  textAlign: 'center',
+                }}>
+                Relationshop
+              </Text>
+            </View>
+          </ScrollView>
+          <View
+            style={{
+              borderBottomColor: '#E8E9ED',
+              borderBottomWidth: 1,
+              marginTop: 16,
+              marginBottom: 20,
+              marginHorizontal: 18,
+            }}></View>
+        </View>
+        {/* Batas Populer Book */}
       </ScrollView>
       {/* Batas Content */}
       {/* Bottom Menu */}
