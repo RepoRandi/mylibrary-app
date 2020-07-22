@@ -5,13 +5,18 @@ const getBook = (search, limit, page, order, sort, token) => {
     type: 'GET_BOOK',
     payload: axios({
       method: 'GET',
-      url: process.env.REACT_APP_API_URL + 'book/',
+      // process.env.REACT_APP_API_URL + 'book/',
+      url: 'http://192.168.1.4:3000/book',
       params: {
         search: search,
         limit: limit,
         page: page,
         orderBy: order,
         sort: sort,
+      },
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: token,
       },
     }),
   };
@@ -23,6 +28,10 @@ const getBookDetail = (id) => {
     payload: axios({
       method: 'GET',
       url: process.env.REACT_APP_API_URL + `book/${id}`,
+      headers: {
+        'Content-Type': 'multipart/form-data',
+        Authorization: token,
+      },
     }),
   };
 };
