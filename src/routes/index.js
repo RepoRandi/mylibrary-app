@@ -9,7 +9,13 @@ const Tab = createBottomTabNavigator();
 const Router = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Splash" component={Splash} />
+      <Stack.Screen
+        name="Splash"
+        component={Splash}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen
         name="WelcomeAuth"
         component={WelcomeAuth}

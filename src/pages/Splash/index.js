@@ -1,5 +1,7 @@
 import React, {useEffect} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
+import {colors} from '../../utils';
+import {IllustrationSplash} from '../../assets';
 
 const Splash = ({navigation}) => {
   useEffect(() => {
@@ -9,10 +11,39 @@ const Splash = ({navigation}) => {
   });
 
   return (
-    <View>
-      <Text>Splash Screen</Text>
+    <View style={styles.wrapper.page}>
+      <View />
+      <IllustrationSplash width={250} height={200} />
+      <Text style={styles.text.welcome}>MyLibrary</Text>
+      <Image
+        source={require('../../assets/loading/loading.gif')}
+        style={styles.wrapper.illustration}
+      />
     </View>
   );
+};
+
+const styles = {
+  wrapper: {
+    page: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: 'white',
+      flex: 1,
+    },
+    illustration: {
+      width: 280,
+      height: 180,
+    },
+  },
+  text: {
+    welcome: {
+      fontSize: 30,
+      fontWeight: 'bold',
+      color: colors.default,
+      marginTop: 10,
+    },
+  },
 };
 
 export default Splash;
