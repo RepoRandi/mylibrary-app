@@ -146,7 +146,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/romance.jpg')}
+                  source={require('../../assets/iconNavigasi/adventure.png')}
                 />
               </View>
               <Text
@@ -156,7 +156,7 @@ const Home = () => {
                   textAlign: 'center',
                   marginTop: 6,
                 }}>
-                Romance
+                Adventure
               </Text>
             </View>
 
@@ -173,7 +173,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
+                  source={require('../../assets/iconNavigasi/fantasi.png')}
                 />
               </View>
               <Text
@@ -183,7 +183,7 @@ const Home = () => {
                   textAlign: 'center',
                   marginTop: 6,
                 }}>
-                Romance
+                Fantasi
               </Text>
             </View>
 
@@ -200,7 +200,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
+                  source={require('../../assets/iconNavigasi/fiction.png')}
                 />
               </View>
               <Text
@@ -210,7 +210,7 @@ const Home = () => {
                   textAlign: 'center',
                   marginTop: 6,
                 }}>
-                Romancesddsdsds
+                Fiction
               </Text>
             </View>
 
@@ -227,7 +227,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
+                  source={require('../../assets/iconNavigasi/religi.png')}
                 />
               </View>
               <Text
@@ -237,7 +237,7 @@ const Home = () => {
                   textAlign: 'center',
                   marginTop: 6,
                 }}>
-                Romance
+                Religi
               </Text>
             </View>
           </View>
@@ -262,7 +262,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
+                  source={require('../../assets/iconNavigasi/romance.png')}
                 />
               </View>
               <Text
@@ -289,7 +289,7 @@ const Home = () => {
                 }}>
                 <Image
                   style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
+                  source={require('../../assets/iconNavigasi/sains.png')}
                 />
               </View>
               <Text
@@ -299,7 +299,34 @@ const Home = () => {
                   textAlign: 'center',
                   marginTop: 6,
                 }}>
-                Romance
+                Saints
+              </Text>
+            </View>
+
+            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
+              <View
+                style={{
+                  width: 60,
+                  height: 60,
+                  borderWidth: 1,
+                  borderColor: '#EFEFEF',
+                  borderRadius: 18,
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}>
+                <Image
+                  style={{width: 50, height: 50}}
+                  source={require('../../assets/iconNavigasi/teknologi.png')}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 11,
+                  fontWeight: 'bold',
+                  textAlign: 'center',
+                  marginTop: 6,
+                }}>
+                Teknologi
               </Text>
             </View>
 
@@ -326,34 +353,7 @@ const Home = () => {
                   textAlign: 'center',
                   marginTop: 6,
                 }}>
-                Romance
-              </Text>
-            </View>
-
-            <View style={{width: `${100 / 4}%`, alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 60,
-                  height: 60,
-                  borderWidth: 1,
-                  borderColor: '#EFEFEF',
-                  borderRadius: 18,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                <Image
-                  style={{width: 50, height: 50}}
-                  source={require('../../assets/iconNavigasi/go-more.png')}
-                />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                Romance
+                More
               </Text>
             </View>
           </View>
