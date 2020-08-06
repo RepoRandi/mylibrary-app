@@ -67,7 +67,7 @@
 - [Randi Maulana Akbar](https://www.linkedin.com/in/randi-maulana-akbar/)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/RepoRandi/LibraryApps/blob/master/LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/RepoRandi/MyLibrary--Mobile-Version/blob/master/LICENSE) file for details
 
 ##
 Copyright © 2020 By Randi Maulana Akbar
